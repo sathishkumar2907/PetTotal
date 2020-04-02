@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Us</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/vendor.js"></script>
+  
+<link href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />   
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<style>
+body {
+    background:#333;
+}
+.form_bg {
+    background-color:#eee;
+    color:#666;
+    padding:20px;
+    border-radius:10px;
+    position: absolute;
+    border:1px solid #fff;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 950px;
+    height: 600px;
+}
+
+#contactusTable{
+    max-width: 900px;
+    display: block;
+    overflow: hidden;
+}
+
+table td {
+  word-wrap: break-word;
+  max-width: 300px;
+}
+</style> 
+</head>
+<body>
+
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                    <h4 class="modal-title" id="myModalLabel">Add Venddor</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="venorid">ID</label>
+                            <input type="text" class="form-control" id="venorid" placeholder="Id" disabled="disabled"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="storename">Store Name</label>
+                            <input type="text" class="form-control" id="storeName" placeholder="storename"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="storecontact">Store Contact</label>
+                            <input type="text" class="form-control" id="storeContact" placeholder="storecontact" />
+                        </div>
+                        <div class="form-group">
+                            <label for="ownername">Owner Name</label>
+                            <input type="text" class="form-control" id="ownerName" placeholder="ownername"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="ownercontact">Owner Contact</label>
+                            <input type="text" class="form-control" id="ownerContact" placeholder="ownercontact"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" class="form-control" id="location" placeholder="location"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Add</button>
+                    <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Update</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>       
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div class="form_bg">
+         <h2>Venddor Record</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New Vendor</button><br /><br />
+       
+       
+ <h2>Vendor</h2>
+  <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>
+                        s.no
+                    </th>
+                    <th>
+                        store name
+                    </th>
+                    <th>
+                        store contact
+                    </th>
+                    <th>
+                        owner name
+                    </th>
+                    <th>
+                        owner contact
+                    </th>
+                    <th>
+                        location
+                    </th>
+                     <th>
+                        Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+            </tbody>
+        </table>
+ 
+     </div>
+     </div>
+     </div>
+     
+</body>
+</html>

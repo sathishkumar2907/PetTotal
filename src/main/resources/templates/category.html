@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Category</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/addcategory.js"></script>
+
+<link
+	href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"
+	rel="stylesheet" type="text/css" />
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+<script
+	src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<style>
+body {
+	background: #fff;
+}
+.navbar{
+ background: #333;
+ padding: 10px;
+ width: 15%;
+ height:900px;
+}
+
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 17px 29px;
+}
+
+.form_bg {
+	background-color: #eee;
+	color: #666;
+	padding: 45px;
+	border-radius: 10px;
+	position: absolute;
+	border: 1px solid #fff;
+	margin: auto;
+	top: 183px;
+	right: -192px;
+	bottom: 10;
+	left: 0;
+	width: 85%;
+	height: 100%;
+}
+
+#category {
+	max-width: 900px;
+	display: block;
+	overflow: hidden;
+}
+
+.tab-content {
+	margin-left: 220px; /* Same as the width of the sidenav */
+}
+
+table td{
+	word-wrap: break-word;
+	max-width: 300px;
+}
+
+.well {
+    min-height: 35px;
+    padding: -37px;
+    margin-bottom: -184px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 147px 17px rgba(0,0,0,.05);
+}
+
+.align-center {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="row">
+            <div class="well">
+                <h1 class="text-center">Petzo</h1>
+                 <h3 class="text-center">contact us</h3>
+                 
+                 <h5 class="text-center"> Logged in as <Strong th:text="${welcomeMessage}"></Strong></h5>
+             </div>
+            <nav class="navbar navbar-light bg-faded">
+            <!--  <div th:switch="$(userRole)"> -->
+                <ul class="nav navbar-nav"> <!-- th:case="'ADMIN'" -->
+                  <li class="nav-item"><a class="nav-link" href="/admin/contactus">contact us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">vendor</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">users</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">delivery executive</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">category</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">sub-category</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">products</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">orders</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">payments</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">terms & conditions</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">help & FAQ</a></li>
+                 </ul>
+			   <!-- </div> -->
+             </nav>
+             
+            </div>
+             
+             
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 class="modal-title" id="myModalLabel">Add Category</h4>
+				</div>
+				<div class="modal-body">
+					<form>
+
+						<div class="form-group">
+							<label for="categoryName">Category Name</label> <input
+								type="text" class="form-control" id="categoryName"
+								placeholder="Category Name" />
+						</div>
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="btnAdd"
+						onclick="return Add();">Add</button>
+					<button type="button" class="btn btn-primary" id="btnUpdate"
+						style="display: none;" onclick="Update();">Update</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="form_bg">
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="clearTextBox();">Add New
+					Category</button>
+				<br />
+				<br />
+
+				<h2>Category</h2>
+				<table id="category" class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>s.no</th>
+							<th>category</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody class="tbody">
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

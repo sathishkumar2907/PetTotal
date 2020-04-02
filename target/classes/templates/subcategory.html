@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sub Category</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/subcategory.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+<style>
+body {
+	background: #333;
+}
+
+.form_bg {
+	background-color: #eee;
+	color: #666;
+	padding: 20px;
+	border-radius: 10px;
+	position: absolute;
+	border: 1px solid #fff;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+}
+
+#category {
+	max-width: 900px;
+	display: block;
+	overflow: hidden;
+}
+
+table td {
+	word-wrap: break-word;
+	max-width: 300px;
+	 padding: 20px; 
+}
+
+th{
+  column-gap: 400px;
+}
+
+.align-center {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">x</button>
+					<h4 class="modal-title" id="myModalLabel">Add Sub-category</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+							 <label for="cat_name">Category</label>
+								<select id="cat_name" name="cat_name" class="form-control">
+									<!-- <option value="">Select Category</option> -->
+								</select>
+							</div>
+						
+                        <div class="form-group">
+							<label for="subcategoryName">Subcategory Name</label>
+							 <input type="text" class="form-control" id="subcategoryName" placeholder="SubCategory Name" />
+						</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" id="btnAdd"
+						onclick="return Add();">Add</button>
+					<button type="button" class="btn btn-primary" id="btnUpdate"
+						style="display: none;" onclick="Update();">Update</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="form_bg">
+				<button type="button" class="btn btn-primary" data-toggle="modal"
+					data-target="#myModal">Add New Sub-Category</button>   <!-- onclick="clearTextBox(); -->
+				<br /> <br />
+
+             
+				<h2>Sub Category</h2>
+				<table id="subcategory" class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>s.no</th>
+							<th>category</th>
+							<th>sub category</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody class="tbody">
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

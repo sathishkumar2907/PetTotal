@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Us</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/contactuslist.js"></script>
+
+<link
+	href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"
+	rel="stylesheet" type="text/css" />
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+<script
+	src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<style>
+body {
+	background: #333;
+}
+
+.form_bg {
+	background-color: #eee;
+	color: #666;
+	padding: 20px;
+	border-radius: 10px;
+	position: absolute;
+	border: 1px solid #fff;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 950px;
+	height: 600px;
+}
+
+.navbar{
+margin-bottom:0px
+}
+
+#contactusTable {
+	max-width: 900px;
+	display: block;
+	overflow: hidden;
+}
+
+table td {
+	word-wrap: break-word;
+	max-width: 300px;
+}
+
+.sidenav {
+	height: 100%;
+	width: 200px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #111;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.sidenav a {
+	padding: 6px 6px 6px 32px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #818181;
+	display: block;
+}
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+.tab-content {
+	margin-left: 220px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 10px;
+	}
+}
+<!--
+>
+-->
+end
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+             <nav class="navbar navbar-light bg-faded">
+            <!--  <div th:switch="$(userRole)"> -->
+               <ul class="nav navbar-nav"> <!-- th:case="'ADMIN'" -->
+                  <li class="nav-item"><a class="nav-link" href="/admin/contactus">contact us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">vendor</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">users</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">delivery executive</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">category</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">sub-category</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">products</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">orders</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">payments</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">terms & conditions</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">help & FAQ</a></li>
+                 </ul>
+                 
+                 <!-- <ul class="nav navbar-nav"> th:case="'SUPER-ADMIN'"
+                   <li class="nav-item"><a class="nav-link" href="/admin/contactus">contact us</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">vendor</a></li>
+                   <li class="nav-item"><a class="nav-link" href="/admin/category">users</a></li>
+                 </ul> -->
+                 
+			   <!-- </div> -->
+             </nav>
+
+			
+			<div class="form_bg">
+
+				<h2>Contact Us</h2>
+				<table id="contactusTable" class="dispaly" style="width: 100%">
+
+					<thead>
+						<tr>
+							<th>s.no</th>
+							<th>Name</th>
+							<th>Contact Number</th>
+							<th>Email</th>
+							<th>Message</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

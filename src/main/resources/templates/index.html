@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.tab-content {
+  margin-left: 220px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 10px;}
+}
+</style>
+
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+ 
+</head>
+<body>
+<div class="sidenav">
+<!-- <ul class="nav nav-tabs"> -->
+
+  <a class="active" data-toggle="tab" href="http://localhost:8080/contactus/contactuspage">Contact us</a>
+   <a data-toggle="tab" href="http://localhost:8080/contactus/contactuspage">vendor</a>
+   <a data-toggle="tab" href="#menu3">users</a>
+  <a data-toggle="tab" href="#menu1">delivery executive</a>
+   <a data-toggle="tab" href="#menu1">category</a>
+   <a data-toggle="tab" href="#menu1">sub category</a>
+   <a data-toggle="tab" href="#menu1">proucts</a>
+   <a data-toggle="tab" href="#menu1">orders</a>
+   <a data-toggle="tab" href="#menu1">payments</a>
+   <a data-toggle="tab" href="#menu1">terms and conditions</a>
+  <a data-toggle="tab" href="#menu1">help & FQA</a>
+
+<!-- </ul> -->
+</div>
+
+  <div class="tab-content">
+  
+   
+    <div id="menu1" class="tab-pane fade">
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>>
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Products</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/js/product.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+<style>
+body {
+	background: #333;
+}
+
+.form_bg {
+	background-color: #eee;
+	color: #666;
+	padding: 20px;
+	border-radius: 10px;
+	position: absolute;
+	border: 1px solid #fff;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	height: 100%;
+}
+
+#category {
+	max-width: 900px;
+	display: block;
+	overflow: hidden;
+}
+
+table td {
+	word-wrap: break-word;
+	max-width: 300px;
+	padding: 20px;
+}
+
+th {
+	column-gap: 400px;
+}
+
+.align-center {
+	text-align: center;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="form_bg">
+				<h2>Products</h2>
+				<table id="product" class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>s.no</th>
+							<th>product name</th>
+							<th>vendor name</th>
+							<th>category</th>
+							<th>sub category</th>
+						</tr>
+					</thead>
+					<tbody class="tbody">
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>
